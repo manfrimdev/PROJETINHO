@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="ui menu">
+        <a class="item" href="#">Estado</a>
+        <a class="item" href="#">Cidade</a>
+        <a class="item" href="#">Grupos</a>
+        <a class="item" href="#">Usuário</a>
+        <div class="right menu">
+            <a class="ui item">Olá, <%= usuario %></a>
+            <a class="ui red button" href="/">Sair</a>
+        </div>
+    </div>
+
+    
+    <div class="ui container">
+        <h1 class="ui header">Gerenciamento de Usuários</h1>
+
+        
+        <div class="ui divided items">
+            <% if (typeof usuarios !== "undefined" && usuarios.length > 0) { %> 
+                <% usuarios.forEach(function(usuario) { %>
+                    <div class="item">
+                        <div class="content">
+                            <a class="header"><%= usuario.nome %></a>
+                            <div class="description">
+                                <p>Email: <%= usuario.email %></p>
+                                <p>Grupo: <%= usuario.grupo_nome %></p>
+                            </div>
+                            <div class="extra">
+                                <a href="/edit/<%= usuario.id %>" class="ui blue button">Editar</a>
+                                <form action="/delete/<%= usuario.id %>" method="POST" style="display:inline;">
+                                    <button type="submit" class="ui red button">Excluir</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>Nenhum usuário encontrado.</p>
+            <% } %>
+        </div>
+
+    </div>
+</body>
+</html>

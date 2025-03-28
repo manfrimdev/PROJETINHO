@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background: url('../img/mar.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.ui.grid {
+    height: 100vh;
+}
+
+.ui.container {
+    max-width: 450px;
+}
+
+.ui.header .content {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.ui.text {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.ui.segment {
+    background: rgba(255, 255, 255, 0.2) !important; /* Fundo escuro semi-transparente para melhor legibilidade */
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+    padding: 25px;
+}
+
+.ui.input input {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.ui.button.teal {
+    background-color: rgba(0, 181, 173, 0.9) !important;
+    color: #ffffff !important;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px;
+}
+
+.ui.message {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.ui.card {
+    background: rgba(0, 0, 0, 0.7) !important; /* Fundo escuro semi-transparente */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.ui.card .header {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.ui.card .description {
+    font-size: 16px;
+    color: #dcdcdc;
+}
+
+.ui.button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
